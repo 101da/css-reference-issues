@@ -1,0 +1,84 @@
+<style>
+
+
+body {
+  color: #555;
+  font-size: 1.1em;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+em {
+  font-size: 0.9em;
+}
+
+.container {
+  margin: 40px auto;
+  max-width: 700px;
+}
+
+.element {
+  padding: 20px;
+  height: 300px;
+  width: 100%;
+  background-color: skyblue;
+}
+
+.element p {
+  visibility: hidden;
+  text-align: center;
+  color: white;
+  font-size: 3em;
+}
+
+.element:-webkit-full-screen {
+  background-color: #e4708a;
+  width: 100vw;
+  height: 100vh;
+}
+
+.element:-webkit-full-screen p {
+  visibility: visible;
+}
+
+.element:-moz-full-screen {
+  background-color: #e4708a;
+  width: 100vw;
+  height: 100vh;
+}
+
+.element:-moz-full-screen p {
+  visibility: visible;
+}
+
+.element:-ms-fullscreen {
+  background-color: #e4708a;
+  width: 100vw;
+  height: 100vh;
+}
+
+.element:-ms-fullscreen p {
+  visibility: visible;
+}
+
+.element:fullscreen {
+  background-color: #e4708a;
+  width: 100vw;
+  height: 100vh;
+}
+
+.element:fullscreen p {
+  visibility: visible;
+}
+
+
+</style>
+<body>
+<div class="container">
+  <p><em>Click the button below to enter the element into fullscreen mode. </em></p>
+  <div class="element" id="element">
+    <p>I'm in fullscreen mode!</p>
+  </div>
+  <br>
+  <button onclick="var el = document.getElementById('element'); el.webkitRequestFullscreen(); full-screen-api.unprefix.enabled()">Go Full Screen!</button>
+</div>
+</body>
